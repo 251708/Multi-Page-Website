@@ -15,9 +15,19 @@ const updateHomePage = () => {
    }) ;
 };
 
+const updateAboutPage = () => {
+    return dispatch({
+     type:"ABOUT_UPDATE",
+     payload:{
+    name:"Try to Taste Special Food ",
+    image:"./images/img3.jpg",
+     },
+    }) ;
+ };
+
 const AppProvider = ({children}) => {
     const[state,dispatch] = useReducer(reducer,initialState);
-    return<AppContext.Provider value = {{...state, updateHomePage}}>{children}</AppContext.Provider>
+    return<AppContext.Provider value = {{...state, updateHomePage,updateAboutPage}}>{children}</AppContext.Provider>
 };
 
 const useGlobalContext = () => {
