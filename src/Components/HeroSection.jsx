@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Button } from '../styles/Button'
 
+
 const HeroSection = () => {
   return<Wrapper>
    <div className='container grid grid-two-column'>
@@ -14,11 +15,12 @@ const HeroSection = () => {
     You got  so many best meal here u really loved it  that my guarantee you never regret for choosing us
     your day just become mesmerizing with so many happiness that comes from the food.
  </p>
-    </div>
-<Button className = "btn hireme-btn">
+ <Button className = "btn hireme-btn">
 <NavLink to = "/contact"> Explore </NavLink>
 
 </Button>
+    </div>
+
 
     <div className='section-hero-image'>
         <picture>
@@ -77,5 +79,6 @@ picture {
   .grid {
     gap: 7.2rem;
   }
-}`;
-export default HeroSection
+}
+`;
+export default HeroSection;
