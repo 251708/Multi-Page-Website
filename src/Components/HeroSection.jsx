@@ -4,16 +4,18 @@ import styled from 'styled-components'
 import { Button } from '../styles/Button'
 
 
-const HeroSection = (props) => {
+const HeroSection = ({name,image}) => {
   return<Wrapper>
    <div className='container grid grid-two-column'>
     <div className='section-hero-data'>
  <p className='hero-top-data'>THIS IS ME</p>
- <h1 className='hero-heading'>{props.name}</h1>
+ <h1 className='hero-heading'>{name}</h1>
  <p className='hero-para'>
-    I'm Sakshi Singh A chief , youtuber and a Teacher. 
-    You got  so many best meal here u really loved it  that my guarantee you never regret for choosing us
-    your day just become mesmerizing with so many happiness that comes from the food.
+  I'm Sakshi Singh A chief , youtuber and a Teacher. 
+  You got  so many best meal here u really loved it 
+  that my guarantee you never regret for choosing us
+  your day just become mesmerizing with so many happiness
+  that comes from the food.
  </p>
  <Button className = "btn hireme-btn">
 <NavLink to = "/contact"> Explore </NavLink>
@@ -24,7 +26,7 @@ const HeroSection = (props) => {
 
     <div className='section-hero-image'>
         <picture>
-           <img src={props.image} alt="hero image" className='hero-img' width={500} /> 
+           <img src={image} alt="hero image" className='hero-img' width={500} /> 
         </picture>
     </div>
    </div>
@@ -58,7 +60,7 @@ const Wrapper = styled.section`
 .hero-para {
   margin-top: 0.2rem;
   margin-bottom: 2.0rem;
-  max-width: 60rem;
+  max-width: 40rem;
 }
 
 .section-hero-image {
