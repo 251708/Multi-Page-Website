@@ -1,7 +1,9 @@
-import React from 'react'
-import HeroSection from './Components/HeroSection'
+
+import HeroSection from './Components/HeroSection';
+
 
 const Home = () => {
+ 
   const data = {
     name:"Enjoy Your Meal",
     image:"./images/img1.jpg",

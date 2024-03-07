@@ -1,17 +1,21 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Button } from '../styles/Button'
+import { AppContext } from '../context';
 
 
 const HeroSection = ({name,image}) => {
-  return<Wrapper>
+ 
+  const firstName = useContext(AppContext);
+  return(
+  <Wrapper>
    <div className='container grid grid-two-column'>
     <div className='section-hero-data'>
  <p className='hero-top-data'>THIS IS ME</p>
  <h1 className='hero-heading'>{name}</h1>
  <p className='hero-para'>
-  I'm Sakshi Singh A chief , youtuber and a Teacher. 
+  I'm {firstName} A chief , youtuber and a Teacher. 
   You got  so many best meal here u really loved it 
   that my guarantee you never regret for choosing us
   your day just become mesmerizing with so many happiness
@@ -30,7 +34,7 @@ const HeroSection = ({name,image}) => {
         </picture>
     </div>
    </div>
-  </Wrapper>
+  </Wrapper>)
 }
 const Wrapper = styled.section`
  padding: 2rem 0;
