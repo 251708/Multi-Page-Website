@@ -5,9 +5,9 @@ import { Button } from '../styles/Button'
 import {  useGlobalContext } from '../context';
 
 
-const HeroSection = ({name,image}) => {
+const HeroSection = () => {
  
-  const firstName = useGlobalContext();
+  const {name, image} = useGlobalContext();
   return(
   <Wrapper>
    <div className='container grid grid-two-column'>
@@ -15,7 +15,7 @@ const HeroSection = ({name,image}) => {
  <p className='hero-top-data'>THIS IS ME</p>
  <h1 className='hero-heading'>{name}</h1>
  <p className='hero-para'>
-  I'm {firstName} A chief , youtuber and a Teacher. 
+  I'm {name} A chief , youtuber and a Teacher. 
   You got  so many best meal here u really loved it 
   that my guarantee you never regret for choosing us
   your day just become mesmerizing with so many happiness

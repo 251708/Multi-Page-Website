@@ -5,6 +5,9 @@ const initialState = {
     name:"",
     image:"",
 };
+const AppProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(reducer, initialState);
+
 const updateHomePage = () => {
    return dispatch({
     type:"HOME_UPDATE",
@@ -24,13 +27,14 @@ const updateAboutPage = () => {
      },
     }) ;
  };
-
-const AppProvider = ({children}) => {
-    const[state,dispatch] = useReducer(reducer,initialState);
-    return<AppContext.Provider value = {{...state, updateHomePage,updateAboutPage}}>{children}</AppContext.Provider>
+ return (
+    <AppContext.Provider value={{ ...state, updateHomePage, udpateAboutPage }}>
+      {children}
+    </AppContext.Provider>
+  );
 };
-
 const useGlobalContext = () => {
     return useContext(AppContext);
 };
+
 export{AppContext,AppProvider , useGlobalContext};
