@@ -2,7 +2,11 @@ import React from 'react'
 import HeroSection from './Components/HeroSection'
 
 const Home = () => {
-  return<HeroSection />
+  const data = {
+    name:"Enjoy Your Meal",
+    image:"./images/img1.jpg",
+  }
+  return<HeroSection {...data} />
 }
 
 export default Home

@@ -4,12 +4,12 @@ import styled from 'styled-components'
 import { Button } from '../styles/Button'
 
 
-const HeroSection = () => {
+const HeroSection = (props) => {
   return<Wrapper>
    <div className='container grid grid-two-column'>
     <div className='section-hero-data'>
  <p className='hero-top-data'>THIS IS ME</p>
- <h1 className='hero-heading'>Enjoy Your Meal</h1>
+ <h1 className='hero-heading'>{props.name}</h1>
  <p className='hero-para'>
     I'm Sakshi Singh A chief , youtuber and a Teacher. 
     You got  so many best meal here u really loved it  that my guarantee you never regret for choosing us
@@ -24,7 +24,7 @@ const HeroSection = () => {
 
     <div className='section-hero-image'>
         <picture>
-           <img src="./images/img1.jpg" alt="hero image" className='hero-img' width={500} /> 
+           <img src={props.image} alt="hero image" className='hero-img' width={500} /> 
         </picture>
     </div>
    </div>
