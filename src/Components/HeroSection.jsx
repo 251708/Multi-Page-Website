@@ -1,13 +1,13 @@
-import React , {useContext} from 'react'
+import React  from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Button } from '../styles/Button'
-import { AppContext } from '../context';
+import {  useGlobalContext } from '../context';
 
 
 const HeroSection = ({name,image}) => {
  
-  const firstName = useContext(AppContext);
+  const firstName = useGlobalContext();
   return(
   <Wrapper>
    <div className='container grid grid-two-column'>
