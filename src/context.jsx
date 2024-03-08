@@ -1,9 +1,12 @@
-import React, { useContext, useReducer } from "react";
+import React, { useContext, useEffect, useReducer } from "react";
 import reducer from "./reducer";
 const AppContext = React.createContext();
+
+const API = "";
 const initialState = {
     name:"",
     image:"",
+    services: [],
 };
 const AppProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
@@ -27,6 +30,20 @@ const updateAboutPage = () => {
      },
     }) ;
  };
+
+ const getServices = async(url) => {
+  try{
+    const res = await fetch(url);
+   const data = await res.json();
+   dispatch({type:"GET_SERVICES " , payload: data})
+  }catch(error){
+    console.log(error);
+  }
+ }
+
+ useEffect(() => {
+  getServices(API);
+ } , []);
  return (
     <AppContext.Provider value={{ ...state, updateHomePage, updateAboutPage }}>
       {children}
