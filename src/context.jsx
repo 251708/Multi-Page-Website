@@ -13,7 +13,7 @@ const updateHomePage = () => {
     type:"HOME_UPDATE",
     payload:{
    name:"Try to Taste Special Food of the Day",
-   image:"./images/img5.jpg",
+   image:"./images/img1.jpg",
     },
    }) ;
 };
@@ -23,7 +23,7 @@ const updateAboutPage = () => {
      type:"ABOUT_UPDATE",
      payload:{
     name:"Try to Taste Special Food ",
-    image:"./images/img3.jpg",
+    image:"./images/img7.jpeg",
      },
     }) ;
  };
