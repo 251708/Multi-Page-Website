@@ -28,7 +28,7 @@ const updateAboutPage = () => {
     }) ;
  };
  return (
-    <AppContext.Provider value={{ ...state, updateHomePage, udpateAboutPage }}>
+    <AppContext.Provider value={{ ...state, updateHomePage, updateAboutPage }}>
       {children}
     </AppContext.Provider>
   );

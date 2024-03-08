@@ -13,7 +13,7 @@ const About = () => {
  useEffect(() => {
   updateAboutPage();
  }, []);
-  return <HeroSection {...data} />
+  return <HeroSection  />
   
 }
 
