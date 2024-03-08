@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+/*import React, { useEffect } from 'react'
 import HeroSection from './Components/HeroSection'
 import { useGlobalContext } from './context'
 
@@ -8,7 +8,7 @@ const About = () => {
     image:"./images/img2.jpg",
 
   };
-  */
+  *
  const {updateAboutPage} = useGlobalContext();
  useEffect(() => {
   updateAboutPage();
@@ -18,3 +18,17 @@ const About = () => {
 }
 
 export default About
+*/
+import React, { useEffect } from "react";
+import HeroSection from "./Components/HeroSection";
+import { useGlobalContext } from "./context";
+
+const About = () => {
+  const { udpateAboutPage } = useGlobalContext();
+
+  useEffect(() => udpateAboutPage(), []);
+
+  return <HeroSection />;
+};
+
+export default About;
