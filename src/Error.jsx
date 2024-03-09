@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Error = () => {
   return (
     <Wrapper>
-      <img src="../images/error.svg" alt="error" />
+      <img src="../images/img2.jpg" alt="error" />
       <NavLink to="/">
         <Button className="btn"> Go Back</Button>
       </NavLink>
