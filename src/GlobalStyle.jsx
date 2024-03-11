@@ -63,7 +63,7 @@
 }
 
 .grid-four-column{
-   grid-template-columns: 1fr 1.2fr .5fr .8fr ;
+   grid-template-columns: 10fr 5fr 7fr 8fr ;
 }
  
  .common-heading{
