@@ -10,8 +10,9 @@ const HeroSection = () => {
   const {name, image} = useGlobalContext();
   return(
   <Wrapper>
-   <div className='container grid grid-two-column'>
-    <div className='section-hero-data'>
+   <FooterGrid>  
+
+  <div className="section-hero-data">
  <p className='hero-top-data'>THIS IS ME</p>
  <h1 className='hero-heading'>{name}</h1>
  <p className='hero-para'>
@@ -33,12 +34,22 @@ const HeroSection = () => {
            <img src={image} alt="hero image" className='hero-img' width={500} /> 
         </picture>
     </div>
-   </div>
-  </Wrapper>)
-}
+    </FooterGrid>
+  </Wrapper>
+  )
+};
+
+const FooterGrid = styled.div`
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  `;
 const Wrapper = styled.section`
  padding: 2rem 0;
 
+ 
 .section-hero-data {
   display: flex;
   flex-direction: column;

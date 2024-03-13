@@ -5,30 +5,28 @@ import { NavLink } from "react-router-dom";
 import { Button } from "./sty/Button";
 
 const Services = () => {
-  const { services } = useGlobalContext();
-  console.log(services);
+  const { results } = useGlobalContext();
+  console.log(results);
 
   return (
     <Wrapper className="section">
       <h2 className="common-heading">Our Services</h2>
       <div className="container grid grid-three-column">
-        {services.map((curElem) => {
-          const { id, name, image, description } = curElem;
-          return (
-            <div key={id} className="card">
+      {
+            results.map(result => (
+              <div key={result.id} className="card">
               <figure>
-                <img src={image} alt={name} />
+                {/* <img src={image} alt={name} /> */}
               </figure>
               <div className="card-data">
-                <h3>{name}</h3>
-                <p>{description}</p>
+                <h3>{result.restaurantName}</h3>
+                <p>{result.address}</p>
                 <NavLink to="/service">
                   <Button className="btn">Read More</Button>
                 </NavLink>
               </div>
             </div>
-          );
-        })}
+            ))}
       </div>
     </Wrapper>
   );

@@ -4,6 +4,7 @@ import HeroSection from './Components/HeroSection';
 import { useGlobalContext } from './context';
 
 
+
 const Home = () => {
  
  /* const data = {
@@ -15,7 +16,11 @@ const Home = () => {
  useEffect(() => 
   updateHomePage()
   ,[]);
-  return<HeroSection  />
+  return<HeroSection />
+
+   
+  
+ 
 }
 
 export default Home

@@ -9,7 +9,7 @@ import Footer from './Components/Footer';
 import {ThemeProvider} from "styled-components";
 const App = () => {
   const theme = {
-   colors:{ heading: "rgb(24 24 29)",
+   colors:{ heading: "rgb(0 0 255)",
    text: "rgb(24 24 29)",
    white: "#fff",
    black: " #212529",
@@ -46,4 +46,12 @@ const App = () => {
 }
 
 export default App
+
+
+/*
+
+components---> pages---->home,about
+               profile-----profile,update
+               
+*/
 
